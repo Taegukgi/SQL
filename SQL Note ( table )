@@ -1,0 +1,53 @@
+MySQL 테이블을 수정하려면 다음 ALTER TABLE명령문을 사용할 수 있습니다. 이 ALTER TABLE문을 사용하면 열 추가, 삭제 또는 수정, 인덱스 생성 또는 삭제, 테이블 이름 바꾸기와 같이 기존 테이블을 변경할 수 있습니다. 수행할 수 있는 몇 가지 일반적인 수정 사항은 다음과 같습니다.
+
+새 열을 추가합니다.
+SQL
+ALTER TABLE table_name
+ADD COLUMN column_name data_type;
+기존 열 수정(예: 데이터 유형 또는 속성 변경):
+SQL
+
+
+ALTER TABLE table_name
+MODIFY COLUMN column_name new_data_type;
+기존 열 삭제(삭제):
+SQL
+
+
+ALTER TABLE table_name
+DROP COLUMN column_name;
+열 이름 바꾸기:
+SQL
+
+
+ALTER TABLE table_name
+CHANGE COLUMN old_column_name new_column_name data_type;
+색인 또는 기본 키를 추가합니다.
+SQL
+
+
+ALTER TABLE table_name
+ADD INDEX index_name (column_name);
+SQL
+
+
+ALTER TABLE table_name
+ADD PRIMARY KEY (column_name);
+인덱스 또는 기본 키 삭제:
+SQL
+
+
+ALTER TABLE table_name
+DROP INDEX index_name;
+SQL
+
+
+ALTER TABLE table_name
+DROP PRIMARY KEY;
+테이블 이름 바꾸기:
+SQL
+
+
+ALTER TABLE old_table_name
+RENAME new_table_name;
+table_name, column_name, , , 및 를 특정 사용 사례에 적합한 값으로 바꾸는 것을 잊지 마십시오 data_type. 잠재적인 데이터 손실을 방지하려면 테이블 스키마를 크게 변경하기 전에 데이터를 백업해야 합니다.index_nameold_column_namenew_column_name
