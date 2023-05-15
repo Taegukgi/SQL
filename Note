@@ -1,0 +1,16 @@
+
+물류에서 가장 인기 있는 데이터베이스는 다음과 같습니다.
+
+MySQL: 오픈 소스, 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 웹 애플리케이션 개발에 널리 사용됩니다.
+PostgreSQL: 오픈 소스, 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 데이터 웨어하우징 및 분석에 널리 사용됩니다.
+Microsoft SQL Server: Microsoft에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 기업 애플리케이션 개발에 널리 사용됩니다.
+Oracle: Oracle에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 기업 애플리케이션 개발에 널리 사용됩니다.
+IBM DB2: IBM에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 기업 애플리케이션 개발에 널리 사용됩니다.
+
+금융에서 가장 인기 있는 데이터베이스는 다음과 같습니다.
+
+Oracle: Oracle은 Oracle Corporation에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 금융 기관에서 널리 사용됩니다.
+Microsoft SQL Server: Microsoft에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 금융 기관에서 널리 사용됩니다.
+IBM DB2: IBM에서 개발한 상용 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 금융 기관에서 널리 사용됩니다.
+SAP HANA: SAP에서 개발한 인메모리 데이터베이스 관리 시스템(DBMS)입니다. 금융 기관에서 널리 사용됩니다.
+PostgreSQL: PostgreSQL은 PostgreSQL Global Development Group에서 개발한 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다. 금융 기관에서 널리 사용됩니다.
