@@ -1,0 +1,43 @@
+PostgreSQL : 배송 추적, 재고 관리, 경로 최적화, 공급망 데이터 분석
+
+1. 배송 추척 : 배송 ID, 발신자, 수취인, 배송 상태 및 배송 날짜를 포함하여 배송에 대한 정보를 저장.
+
+  *예제 리문 .
+  SELECT shipment_id, sender, receiver, shipment_status, delivery_date
+  FROM shipments
+  WHERE (shipment_id, delivery_date) IN (
+    SELECT shipment_id, MAX(delivery_date)
+    FROM shipments
+    GROUP BY shipment_id // 배송테이블
+);
+
+2. 재고 관리 : 창고에 있는 다양한 제품의 사용 가능한 수량을 추적
+
+  *예제 쿼리문
+  SELECT product_name, available_quantity
+  FROM inventory
+  WHERE available_quantity < 100;
+
+3. 경로 최적화 : 다양한 배송 지점의 위도 및 경도 좌표
+
+  *예제 쿼리문
+  SELECT location_id, location_name, latitude, longitude,
+       (6371 * ACOS(COS(RADIANS(lat1)) * COS(RADIANS(latitude)) * COS(RADIANS(long1) - RADIANS(longitude)) + SIN(RADIANS(lat1)) * SIN(RADIANS(latitude)))) AS distance
+FROM locations
+ORDER BY distance;
+
+4. 공급망 데이터 분석 : 제품ID, 판매 수량 및 날짜와 함께 판매 데이터를 저장
+
+  *예제 쿼리문
+  SELECT product_id, SUM(quantity_sold) AS total_sales
+  FROM sales
+  WHERE EXTRACT(MONTH FROM sale_date) = 7 -- July (replace 7 with the desired month) // 월별 단위 / 년 단위로 수정 가능
+  GROUP BY product_id;
+
+5. 테이블 조인 : 물류 및 유통 포괄적인 정보를 얻기 위해 사용한다.
+
+  *예제 쿼리문
+  SELECT s.shipment_id, s.sender, s.receiver, s.shipment_status, s.delivery_date, i.product_name
+  FROM shipments s
+  JOIN inventory i ON s.product_id = i.product_id;
+  
